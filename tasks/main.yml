@@ -1,0 +1,22 @@
+---
+# tasks file for pathogit
+
+- name: "Install pathogen"
+  git:
+    repo: "https://github.com/tpope/vim-pathogen"
+    version: master
+    depth: 1
+    dest: "{{ ansible_env.HOME }}/.vim"
+
+- name: "Infect .vimrc"
+  lineinfile:
+    line: "execute pathogen#infect()"
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+
+- name: "Install plugins"
+  git:
+    repo: "{{ item.repo }}"
+    version: "{{ item.version | default('master') }}"
+    dest: "{{ ansible_env.HOME }}/.vim/bundle/{{ item.name | default(item.repo.split('/')[-1][:-4]) }}"
+    depth: 1
+  with_items: "{{ pathogen_plugins }}"

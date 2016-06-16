@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Enzzo Cavallo
+  description: Install and manage pathogen and plugins
+  license: GPLv3
+  min_ansible_version: 1.2
+  github_branch: master
+  galaxy_tags:
+    - vim
+    - pahtogen
+    - pathogit
+    - git
+    - neovim ## future...
+    - nvim
+
