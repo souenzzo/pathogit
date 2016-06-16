@@ -9,7 +9,6 @@ galaxy_info:
       versions:
         - any
         - all
-  dependencies: []
   galaxy_tags:
     - vim
     - pahtogen
@@ -18,3 +17,4 @@ galaxy_info:
     - neovim ## future...
     - nvim
 
+dependencies: []
