@@ -4,6 +4,11 @@ galaxy_info:
   license: GPLv3
   min_ansible_version: 1.2
   github_branch: master
+  plataforms:
+    - name: GenericUNIX
+      versions:
+        - any
+        - all
   galaxy_tags:
     - vim
     - pahtogen
