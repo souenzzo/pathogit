@@ -12,8 +12,11 @@ Role Variables
 --------------
 
 vim dir: "{{ ansible_env.HOME }}/.vim"
+
 vimrc: "{{ ansible_env.HOME }}/.vimrc"
+
 plugins dir: "{{ ansible_env.HOME }}/.vim/bundle"
+
 
 Dependencies
 ------------
